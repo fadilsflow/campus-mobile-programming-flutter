@@ -1,3 +1,4 @@
+import 'package:campus_mobile_programming/profilePage.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -92,6 +93,15 @@ class _HomePageState extends State<HomePage> {
                   ElevatedButton(
                     onPressed: () => notifBerhasil(context, "Notifff"),
                     child: Text("Snackbar"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Profilepage()),
+                      );
+                    },
+                    child: Text("Profile Page"),
                   ),
                 ],
               ),
