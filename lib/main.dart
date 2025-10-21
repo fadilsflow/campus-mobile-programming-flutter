@@ -14,7 +14,7 @@ class CounterApp extends StatefulWidget {
 class _CounterAppState extends State<CounterApp> {
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(home: HomePage());
   }
 }
 
@@ -60,6 +60,39 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (builder) {
+                      return AlertDialog(
+                        title: Icon(Icons.warning),
+                        content: Text(
+                          "Apakah anda yakin ingin mereset nilai? ",
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                nilai = 0;
+                              });
+                              Navigator.pop(context);
+                            },
+                            child: Text("Ya"),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text("Tidak"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                child: Text("Dialog"),
+              ),
             ],
           ),
         ),
