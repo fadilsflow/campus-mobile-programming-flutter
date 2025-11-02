@@ -45,7 +45,7 @@ class _EditRecipePageState extends State<EditRecipePage> {
                 ),
               ),
               const SizedBox(height: 20),
-                (
+              TextField(
                 controller: _ingredientsController,
                 maxLines: 3,
                 decoration: const InputDecoration(
@@ -80,7 +80,7 @@ class _EditRecipePageState extends State<EditRecipePage> {
                     shadowColor: Colors.transparent,
                   ),
                   child: const Text(
-                    'Ubah', 
+                    'Ubah',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
