@@ -1,4 +1,7 @@
+import 'package:crud/pages/demodelete.dart';
 import 'package:crud/pages/demoget.dart';
+import 'package:crud/pages/demoputpatch.dart';
+import 'package:crud/pages/demopost.dart';
 import 'package:crud/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +19,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/demoget': (context) => const DemoGet(),
+        '/demopost': (context) => const DemoPost(),
+        '/demopatch': (context) => const DemoPutPatch(),
+        '/demodelete': (context) => const DemoDelete(),
       },
       // home: HomePage(),
     );

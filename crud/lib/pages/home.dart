@@ -17,6 +17,27 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Demo GET'),
             ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/demopost");
+              },
+              child: const Text('Demo POST'),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/demopatch");
+              },
+              child: const Text('Demo PATCH'),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/demodelete");
+              },
+              child: const Text('Demo DELETE'),
+            ),
           ],
         ),
       ),
